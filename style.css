@@ -1,0 +1,71 @@
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+/* fade-in for results ( for cool looking ) */
+#data-box {
+  animation: fadeIn 0.6s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scrollbar styling ( for coooool looking ) */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #60a5fa;
+}
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+/* ✅ fixed floating table */
+#token-section table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: #1e293b;
+}
+
+#token-section thead {
+  position: sticky;
+  top: -24px;
+  z-index: 20;
+  background-color: #1e293b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* animating underline ( for cooool looking ) */
+#tab-line {
+  width: 50%;
+  transform: translateX(0%);
+}
+#tab-line.nfts {
+  transform: translateX(100%);
+}
